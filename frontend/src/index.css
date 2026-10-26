@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply bg-navy-50 text-navy-900 antialiased; }
+  body { @apply font-sans; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-azure-500; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-navy-100 bg-white shadow-soft; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-navy-900 text-white hover:bg-navy-700; }
+  .btn-accent { @apply btn bg-azure-600 text-white hover:bg-azure-700; }
+  .btn-outline { @apply btn border border-navy-200 bg-white text-navy-800 hover:bg-navy-50; }
+  .btn-ghost { @apply btn text-navy-600 hover:bg-navy-100; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .input { @apply w-full rounded-xl border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-300 focus:border-azure-500 focus:outline-none focus:ring-2 focus:ring-azure-100 disabled:bg-navy-50; }
+  .label { @apply mb-1.5 block text-sm font-medium text-navy-700; }
+  .bg-hero { background: radial-gradient(1200px 500px at 85% -10%, #dbe7ff 0%, transparent 60%), linear-gradient(180deg, #ffffff, #f3f6fb); }
+  .bg-brand { background: linear-gradient(135deg, #0b1f44 0%, #1a2c52 55%, #1f55e0 140%); }
+}

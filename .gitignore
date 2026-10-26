@@ -1,0 +1,23 @@
+node_modules/
+dist/
+__pycache__/
+.venv/
+.env
+backend/policysense.db
+backend/chroma_store/
+backend/uploads/
+# Python virtual environments
+.venv312/
+venv/
+
+# Environment variables and secrets
+.env.*
+!.env.example
+
+# Python cache and generated files
+*.py[cod]
+.pytest_cache/
+
+# Local databases and generated data
+*.db
+*.sqlite3
